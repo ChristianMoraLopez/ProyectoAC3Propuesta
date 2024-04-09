@@ -1,3 +1,5 @@
 export { default as CSymbol } from './CSymbol'
-export { default as Basket } from './Basket'
+export { default as Play } from './Play'
 export { default as PosMeColoreo } from './PosMeColoreo'
+export { default as AmazonLogo } from './AmazonLogo'
+

@@ -11,10 +11,14 @@ type LayoutProps = {
 const Layout = ({ children }: LayoutProps) => (
   <>
     <Navbar />
-    <Container as="main" text className='min-w-fit'>
-      {children}
-    </Container>
-    <Footer />
+    <Container as="main" text className='min-w-fit'>{children}</Container>
+    <Footer/>
+    
+
+
+   
+ 
+
   </>
 )
 

@@ -8,23 +8,33 @@ type Json =
   | Json[]
 
 type TProductId = string
-
-
-
 type TProductAttributes = {
-  
-  description: string
-  medium: string
-  dimensions: string
-  style: string
+  color?: string
+  connectivity?: string
+  power_source?: string
+  display?: string
+  storage?: string
+  capacity?: string
+  ports?: string
+  weight?: string
+  material?: string
+  thread_count?: string
+  resolution?: string
+  size?: string
+  grip_type?: string
+  dimensions?: string // Nuevo atributo agregado
+  reason?: string // Nuevo atributo agregado
+  action?: string // Nuevo atributo agregado
+  description,
 }
 
 type TProduct = {
   sku: string
   id: TProductId
   name: string
-  artist: string
-  year: number
+  brand: string // Nuevo atributo agregado para coincidir con los datos de Amazon
+  artist?: string // Modificado para ser opcional, ya que Amazon no tiene artistas para sus productos
+  year?: number // Modificado para ser opcional, ya que Amazon no proporciona años de creación para sus productos
   price: number
   image: Url
   attributes: TProductAttributes
@@ -33,7 +43,7 @@ type TProduct = {
 type TAPIARTDetailResponse = TProduct
 
 type TAPIartResponse = {
-  lenght: number
+  length: number // Corregido error tipográfico
   data: TProduct[]
   error?: string
 }

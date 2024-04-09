@@ -112,10 +112,10 @@ export const useCart = () => {
     subTotal,
   }
 }
-export const useCartMutations = () => {
+export const useActionMutations = () => {
   const dispatch = useContext(CartDispatchContext)
 
-  const addToCart = (product: TProduct, quantity?: number) =>
+  const Action = (product: TProduct, quantity?: number) =>
     dispatch({
       type: 'add',
       item: product,
@@ -129,7 +129,7 @@ export const useCartMutations = () => {
     })
 
   return {
-    addToCart,
+    Action,
     removeFromCart,
   }
 }
